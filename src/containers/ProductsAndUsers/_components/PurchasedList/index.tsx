@@ -21,7 +21,7 @@ export const PurchasedList = () => {
           </ul>
         ) : (
           <div className="text-center">
-            <div className="text-base dark:text-gray-300 text-gray-700 ">you have not selected yet</div>
+            <div className="text-base text-gray-700 ">you have not selected yet</div>
             <Image src="/images/empty-shopping-bag.jpg" alt="empty-shopping-bag" width={250} height={200} />
           </div>
         )}

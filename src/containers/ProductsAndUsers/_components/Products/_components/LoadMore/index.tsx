@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { Spinner } from '../../../../../../components/Spinner';
 import { getListOfProducts } from '../../../../../../service/product';
 import { ProductsList } from '../ProductsList';
+import Image from 'next/image';
 
 export const LoadMore = ({ productSearch }) => {
   const { inView, ref } = useInView();
@@ -39,7 +40,9 @@ export const LoadMore = ({ productSearch }) => {
     <div>
       <ProductsList products={products} productSearch={productSearch} />
       {isFetchAllData ? (
-        <div className="text-base dark:text-gray-300 text-gray-700">there are no items any more</div>
+        <div className="flex justify-center mt-8">
+          <Image src="/images/no-search-results.svg" alt="not-found" width={200} height={200} />
+        </div>
       ) : (
         <div ref={ref}>
           <Spinner />
