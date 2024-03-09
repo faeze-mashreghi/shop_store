@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { Product } from '../types/product';
 
-const initialState = {
+interface PurchasedSlice {
+  purchaseList: Product[];
+}
+const initialState: PurchasedSlice = {
   purchaseList: [],
 };
 

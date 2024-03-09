@@ -1,8 +1,8 @@
 import { ProductsAndUsers } from '../containers/ProductsAndUsers';
-const MainPage = () => {
+const MainPage = ({ searchParams }) => {
   return (
     <div>
-      <ProductsAndUsers />
+      <ProductsAndUsers searchParams={searchParams} />
     </div>
   );
 };

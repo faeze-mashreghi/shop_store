@@ -1,4 +1,4 @@
-import { getListOfProducts } from '../../../../Server/product';
+import { getListOfProducts } from '../../../../service/product';
 import { ProductCard } from './_components/ProductCard';
 
 export const ProductsList = async () => {

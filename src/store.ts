@@ -1,12 +1,12 @@
-import { combineReducers, configureStore  } from "@reduxjs/toolkit";
-import purchaseReducer from "./features/pruchaseSlice";
-
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import purchaseReducer from './features/pruchaseSlice';
 
 const rootReducer = combineReducers({
-    purchase: purchaseReducer,
-},);
+  purchase: purchaseReducer,
+});
 
 export const store = configureStore({
-    reducer: rootReducer,
-
+  reducer: rootReducer,
 });
+
+export type RootState = ReturnType<typeof rootReducer>;

@@ -1,5 +1,6 @@
 module.exports = {
-    images: {
-        domains: ["fakestoreapi.com"],
-    },
-}
+  experimental: { serverActions: true },
+  images: {
+    domains: ['fakestoreapi.com'],
+  },
+};

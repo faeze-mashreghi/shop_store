@@ -11,8 +11,8 @@ export const PurchaseCard = ({ title, price, imageSRC, id }) => {
   };
   return (
     <div className="flex py-6">
-      <div className="h-24 w-24 flex-shrink-0  overflow-hidden rounded-md border border-gray-200">
-        <Image width={60} height={60} src={imageSRC} alt={title} />
+      <div className="h-24 w-24 flex-shrink-0 flex justify-center items-center overflow-hidden rounded-md border border-gray-200">
+        <Image width={60} height={50} src={imageSRC} alt={title} />
       </div>
 
       <div className="ml-4 flex flex-1 flex-col">
