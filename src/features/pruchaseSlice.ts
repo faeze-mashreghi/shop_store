@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Product } from '../shared/types/product';
 
 interface PurchasedSlice {
@@ -12,14 +12,12 @@ export const purchaseSlice = createSlice({
   name: 'purchase',
   initialState,
   reducers: {
-    addToPurchase: (state, action) => {
-      state?.purchaseList.findIndex((product) => product.id === action.payload.id)
-        ? state.purchaseList.push(action.payload)
-        : state.purchaseList;
+    addToPurchase: (state, action: PayloadAction<Product>) => {
+      const isExist = state?.purchaseList.findIndex((product) => product.id === action.payload.id);
+      if (isExist) state.purchaseList.push(action.payload);
     },
     removeFromPurchase: (state, action) => {
       return {
-        ...state,
         purchaseList: [...state.purchaseList].filter((product) => product.id !== action.payload),
       };
     },

@@ -1,3 +1,4 @@
+import { use } from 'react';
 import { getListOfProducts } from '../../../../service/product';
 import { ProductsList } from './_components/ProductsList';
 import { LoadMore } from './_components/LoadMore';
@@ -7,8 +8,8 @@ interface ProductsProps {
   productSearch: string;
 }
 
-export const Products = async ({ productSearch }: ProductsProps) => {
-  const products = await getListOfProducts(10);
+export const Products = ({ productSearch }: ProductsProps) => {
+  const products = use(getListOfProducts(10));
 
   return (
     <>

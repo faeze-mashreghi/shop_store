@@ -1,10 +1,11 @@
+import { use } from 'react';
 import { getListOfUsers } from '../../../../service/user';
 import { UserCard } from './_components/UserCard';
 import Image from 'next/image';
 import { SearchItems } from '../SearchItems';
 
-export const UsersList = async ({ userSearch }) => {
-  const users = await getListOfUsers();
+export const UsersList = ({ userSearch }) => {
+  const users = use(getListOfUsers());
   const regex = new RegExp(userSearch, 'i');
   const filteredUser = users.filter(({ name }) => regex.test(name.firstname) || regex.test(name.lastname));
   return (

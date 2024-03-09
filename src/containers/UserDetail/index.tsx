@@ -1,11 +1,13 @@
+import { use } from 'react';
 import { getUserById } from '../../service/user';
 import Image from 'next/image';
 
 interface UserDetailProps {
   id: string;
 }
-export const UserDetail = async ({ id }: UserDetailProps) => {
-  const userDetail = await getUserById(id);
+export const UserDetail = ({ id }: UserDetailProps) => {
+  const userDetail = use(getUserById(id));
+
   const { name, email, phone, address } = userDetail;
 
   return (

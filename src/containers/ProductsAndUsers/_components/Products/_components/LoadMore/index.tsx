@@ -27,10 +27,10 @@ export const LoadMore = ({ productSearch }: LoadMoreProps) => {
   const handleLoadMoreProducts = async () => {
     const productsLimit = productNumbersLimit + 10;
     const newProducts = await getListOfProducts(productsLimit);
-    // there is a bug in here which the API was so simple that i couldn't limit that i want the 10 next item,
+    // there is a bug in here which the API was so simple that I couldn't limit that I want the 10 next item,
     // since I want to have ssr component for 10 first product
     // in here I get 10 first product here.
-    // I could filter them but i didn't
+    // I could filter them but I didn't
 
     if (newProducts.length > productNumbersLimit) {
       setProducts((prevProducts) => [...prevProducts, ...newProducts]);
