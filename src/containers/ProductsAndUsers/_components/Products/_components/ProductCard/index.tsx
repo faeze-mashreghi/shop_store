@@ -16,7 +16,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   };
   return (
     <button
-      className=" mt-4 w-80 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg"
+      className="mt-4 w-80 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg"
       onClick={handleSelectedProductClick}
     >
       <div className="h-48 w-full object-cover object-center relative">

@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Shop App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Task:
 
-In the project directory, you can run:
+● Create a web application that displays three columns: products, users, and
+selected products.
 
-### `npm start`
+● All columns should be searchable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+● Clicking on a product should add it to the third column.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+● Clicking on a selected product in the third column should remove it from the
+column.
 
-### `npm test`
+● The products column should initially display 10 products, and the remaining
+products should be displayed when the user scrolls to the bottom of the page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+● Clicking on a user in the users column should redirect to the user's details page.
 
-### `npm run build`
+● The application should be built using Next.js, TypeScript, Tailwind CSS, and
+Zustand (or Redux Toolkit) for state management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository to your local machine:
 
-### `npm run eject`
+```bash
+git clone https://github.com/faeze-mashreghi/shop_store.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Navigate to the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd shop_store
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```npm install```
 
-## Learn More
+## Development
+To start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```npm run dev```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+Next.js: A React framework for building server-side rendered and statically generated applications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+React: A JavaScript library for building user interfaces.
 
-### Analyzing the Bundle Size
+Redux Toolkit: A toolset for efficient Redux development, providing utilities to simplify common Redux patterns.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Tailwind CSS: A utility-first CSS framework for building custom designs quickly.
 
-### Making a Progressive Web App
+TypeScript: A statically typed superset of JavaScript that adds optional static typing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Folder Structure
+app/: Contains Next.js pages for routing and also it hande error and loading.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+components/: Contains simple and basic react components.
 
-### Deployment
+containers/: Each component in the container is parallel to each page we have. Within the containers, there are folders named '_component' which contain logical components to handle logic.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+features/: Contains Redux logic including actions, reducers, and store configuration.
 
-### `npm run build` fails to minify
+shared/: Contains types and routs which are global in project .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+public/: Contains static assets.
+
+service/: Contains API methods
+

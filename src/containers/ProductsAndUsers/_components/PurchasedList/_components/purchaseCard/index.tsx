@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
-import { removeFromPurchase } from '../../features/pruchaseSlice';
-import { Product } from '../../shared/types/product';
+import { removeFromPurchase } from '../../../../../../features/pruchaseSlice';
+import { Product } from '../../../../../../shared/types/product';
 
 export interface PurchaseCardProps extends Omit<Product, 'category' | 'image' | 'description'> {
   imageSRC: string;

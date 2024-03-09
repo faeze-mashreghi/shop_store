@@ -1,6 +1,6 @@
 'use client';
 
-import { PurchaseCard } from '../../../../components/purchaseCard';
+import { PurchaseCard } from './_components/purchaseCard';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../store';
 import Image from 'next/image';
