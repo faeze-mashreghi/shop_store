@@ -1,7 +1,12 @@
 import { ProductCard } from '../ProductCard';
-import Image from 'next/image';
+import { Product } from '../../../../../../shared/types/product';
 
-export const ProductsList = ({ products, productSearch }) => {
+export interface ProductsListProps {
+  products: Product[];
+  productSearch: string;
+}
+
+export const ProductsList = ({ products, productSearch }: ProductsListProps) => {
   const regex = new RegExp(productSearch, 'i');
   const filteredProduct = products.filter((product) => regex.test(product.title));
 

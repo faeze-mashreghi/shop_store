@@ -1,10 +1,15 @@
 'use client';
 
 import { useDispatch } from 'react-redux';
-
 import Image from 'next/image';
 import { addToPurchase } from '../../../../../../features/pruchaseSlice';
-export const ProductCard = ({ product }) => {
+import { Product } from '../../../../../../shared/types/product';
+
+interface ProductCardProps {
+  product: Product;
+}
+
+export const ProductCard = ({ product }: ProductCardProps) => {
   const dispatch = useDispatch();
   const handleSelectedProductClick = () => {
     dispatch(addToPurchase(product));

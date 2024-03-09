@@ -3,8 +3,13 @@
 import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { removeFromPurchase } from '../../features/pruchaseSlice';
+import { Product } from '../../shared/types/product';
 
-export const PurchaseCard = ({ title, price, imageSRC, id }) => {
+export interface PurchaseCardProps extends Omit<Product, 'category' | 'image' | 'description'> {
+  imageSRC: string;
+}
+
+export const PurchaseCard = ({ title, price, imageSRC, id }: PurchaseCardProps) => {
   const dispatch = useDispatch();
   const handleClickOnSelectedPurchase = () => {
     dispatch(removeFromPurchase(id));

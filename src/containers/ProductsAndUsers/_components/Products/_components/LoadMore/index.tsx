@@ -7,7 +7,11 @@ import { getListOfProducts } from '../../../../../../service/product';
 import { ProductsList } from '../ProductsList';
 import Image from 'next/image';
 
-export const LoadMore = ({ productSearch }) => {
+interface LoadMoreProps {
+  productSearch: string;
+}
+
+export const LoadMore = ({ productSearch }: LoadMoreProps) => {
   const { inView, ref } = useInView();
 
   const [products, setProducts] = useState<Product[]>([]);

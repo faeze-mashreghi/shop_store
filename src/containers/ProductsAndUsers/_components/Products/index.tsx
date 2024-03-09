@@ -3,7 +3,11 @@ import { ProductsList } from './_components/ProductsList';
 import { LoadMore } from './_components/LoadMore';
 import { SearchItems } from '../SearchItems';
 
-export const Products = async ({ productSearch }) => {
+interface ProductsProps {
+  productSearch: string;
+}
+
+export const Products = async ({ productSearch }: ProductsProps) => {
   const products = await getListOfProducts(10);
 
   return (
