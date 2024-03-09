@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { Product } from '../types/product';
+import { Product } from '../shared/types/product';
 
 interface PurchasedSlice {
   purchaseList: Product[];

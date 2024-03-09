@@ -1,7 +1,7 @@
 'use service';
 
 import { baseURL } from '../index';
-import { Product } from '../../types/product';
+import { Product } from '../../shared/types/product';
 
 export async function getListOfProducts(limit: number) {
   const apiUrl = `${baseURL}/products?limit=${limit}`;

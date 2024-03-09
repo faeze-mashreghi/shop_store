@@ -15,7 +15,7 @@ export const UsersList = async ({ userSearch }) => {
           .filter(({ name }) => regex.test(name.firstname) || regex.test(name.lastname))
           .map(({ name, id }) => (
             <li className="mt-6" key={id}>
-              <UserCard firstName={name.firstname} lastName={name.lastname} />
+              <UserCard firstName={name.firstname} lastName={name.lastname} id={id} />
             </li>
           ))}
       </ul>

@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Product } from '../../../../../../types/product';
+import { Product } from '../../../../../../shared/types/product';
 import { useInView } from 'react-intersection-observer';
 import { Spinner } from '../../../../../../components/Spinner';
 import { getListOfProducts } from '../../../../../../service/product';
