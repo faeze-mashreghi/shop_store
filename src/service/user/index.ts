@@ -15,7 +15,7 @@ export async function getListOfUsers() {
 }
 export async function getUserById(id) {
   const apiUrl = `${baseURL}/users/${id}`;
-  console.log({ apiUrl });
+
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
