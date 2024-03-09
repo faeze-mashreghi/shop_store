@@ -33,7 +33,7 @@ git clone https://github.com/faeze-mashreghi/shop_store.git
 
 ## Navigate to the project directory:
 
-cd shop_store
+```cd shop_store```
 
 ## Install dependencies:
 
@@ -58,17 +58,17 @@ TypeScript: A statically typed superset of JavaScript that adds optional static 
 
 
 ## Folder Structure
-app/: Contains Next.js pages for routing and also it hande error and loading.
+```app/: Contains Next.js pages for routing and also it hande error and loading.```
 
-components/: Contains simple and basic react components.
+```components/: Contains simple and basic react components.```
 
-containers/: Each component in the container is parallel to each page we have. Within the containers, there are folders named '_component' which contain logical components to handle logic.
+```containers/: Each component in the container is parallel to each page we have. Within the containers, there are folders named '_component' which contain logical components to handle logic.```
 
-features/: Contains Redux logic including actions, reducers, and store configuration.
+```features/: Contains Redux logic including actions, reducers, and store configuration.```
 
-shared/: Contains types and routs which are global in project .
+```shared/: Contains types and routs which are global in project .```
 
-public/: Contains static assets.
+```public/: Contains static assets.```
 
-service/: Contains API methods
+```service/: Contains API methods```
 
