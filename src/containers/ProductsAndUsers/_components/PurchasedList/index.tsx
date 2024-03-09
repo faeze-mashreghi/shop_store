@@ -19,7 +19,9 @@ export const PurchasedList = () => {
             ))}
           </ul>
         </div>
-      ) : null}
+      ) : (
+        <div className="text-base dark:text-gray-300 text-gray-700">you have not selected yet</div>
+      )}
     </>
   );
 };

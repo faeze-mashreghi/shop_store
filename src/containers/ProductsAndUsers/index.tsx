@@ -1,4 +1,4 @@
-import { ProductsList } from './_components/ProductsList';
+import { Products } from './_components/Products';
 import { UsersList } from './_components/UsersList';
 import { PurchasedList } from './_components/PurchasedList';
 
@@ -6,7 +6,7 @@ export const ProductsAndUsers = ({ searchParams }) => {
   return (
     <div className="flex  flex-col  items-center justify-center w-100% sm:items-start sm:flex-row sm:justify-evenly">
       <div>
-        <ProductsList />
+        <Products productSearch={searchParams.productSearch} />
       </div>
       <div>
         <UsersList userSearch={searchParams.userSearch} />

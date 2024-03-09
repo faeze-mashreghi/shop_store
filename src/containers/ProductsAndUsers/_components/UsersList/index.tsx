@@ -1,14 +1,15 @@
 import { getListOfUsers } from '../../../../service/user';
 import { UserCard } from './_components/UserCard';
-import { UserSearch } from './_components/UserSearch';
+
+import { SearchItems } from '../SearchItems';
 
 export const UsersList = async ({ userSearch }) => {
   const users = await getListOfUsers();
   const regex = new RegExp(userSearch, 'i');
-  ///todo add debounce
+
   return (
     <>
-      <UserSearch />
+      <SearchItems id="user" />
       <ul>
         {users
           .filter(({ name }) => regex.test(name.firstname) || regex.test(name.lastname))

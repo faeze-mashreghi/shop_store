@@ -13,7 +13,9 @@ export const purchaseSlice = createSlice({
   initialState,
   reducers: {
     addToPurchase: (state, action) => {
-      state.purchaseList.push(action.payload);
+      state?.purchaseList.findIndex((product) => product.id === action.payload.id)
+        ? state.purchaseList.push(action.payload)
+        : state.purchaseList;
     },
     removeFromPurchase: (state, action) => {
       return {
